@@ -1,38 +1,79 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background-color: #d33d29;
+color: rgb(104, 104, 104);
+font-family: "Poppins",sans-serif;
+margin: 0 auto;
+height: 100%;
+width: 100%;
+  background-image: url(https://pngimg.com/uploads/filmstrip/filmstrip_PNG100.png);
+  background-size: 130%;
+background-repeat: no-repeat;
+background-position-y: 850px;
+background-position-x: -80px;
+
+}
+
+.MoviesList {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem;
+}
+.movie-card {
+  border-radius: 6px;
+  background: darkred;
+  position: relative;
+  margin: 1rem;
+  width: 358px;
+  box-shadow: 6px 8px 28px 0px rgb(0, 0, 0 );
+}
+img{
+  width: 300px;
+}
+#btn-add:hover {
+  color: rgb(44, 157, 157);
+  background-color: rgb(110, 237, 237);
+  box-shadow: 0 0 1em 0.25em rgb(110, 237, 237), 0 0 4em 2em rgba(65, 243, 243, 0.781), inset 0 0 0.75em 0.25em rgb(110, 237, 237);
+}
+#btn-add:active {
+  box-shadow: 0 0 0.6em 0.25em rgb(110, 237, 237), 0 0 2.5em 2em rgba(65, 243, 243, 0.781), inset 0 0 0.5em 0.25em rgb(110, 237, 237);
+}
+#btn-add {
+  display: flex;
+  position: relative;
+  padding: 0.25em 1em;
+  color: rgb(110, 237, 237);
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.5em rgb(110, 237, 237);
+  background-color: rgb(44, 157, 157);
+  border: 0.25em solid rgb(110, 237, 237);
+  border-radius: 1em;
+  box-shadow: 0 0 1em 0.25em rgb(110, 237, 237), 0 0 4em 1em rgba(65, 243, 243, 0.781), inset;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-left: 100px;
+}
+#btn-add::after {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(65, 243, 243, 0.781);
+  filter: blur(2em);
+  opacity: 0.7;
+  pointer-events: none;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+#kj{
+  background-image: url("https://miro.medium.com/max/1400/1*5lyavS59mazOFnb55Z6znQ.png");
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
